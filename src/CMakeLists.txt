@@ -23,9 +23,17 @@ add_subdirectory(shared)
 add_subdirectory(genrev)
 
 # Needs to link against mangos_world.lib
-if(BUILD_MANGOSD)
+if(BUILD_MANGOSD_ZERO)
     # Build the mangos game library
-    add_subdirectory(game)
+    add_subdirectory(gameZero)
+endif()
+if(BUILD_MANGOSD_ONE)
+    # Build the mangos game library
+    add_subdirectory(gameOne)
+endif()
+if(BUILD_MANGOSD_TWO)
+    # Build the mangos game library
+    add_subdirectory(gameTwo)
 endif()
 
 if(BUILD_MANGOSD)

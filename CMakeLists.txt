@@ -53,6 +53,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #==================================================================================
 # Define available cmake options below
 option(BUILD_MANGOSD        "Build the main server"                         ON)
+option(BUILD_MANGOSD_ZERO   "Build the main server"                         OFF)
+option(BUILD_MANGOSD_ONE    "Build the main server"                         OFF)
+option(BUILD_MANGOSD_TWO    "Build the main server"                         OFF)
 option(BUILD_REALMD         "Build the login server"                        ON)
 option(BUILD_TOOLS          "Build the map/vmap/mmap extractors"            ON)
 option(USE_STORMLIB         "Use StormLib for reading MPQs"                 ON)
@@ -71,6 +74,9 @@ message(
    General:
     CMAKE_INSTALL_PREFIX    Path where the server should be installed to
     BUILD_MANGOSD           Build the main server
+    BUILD_MANGOSD_ZERO      Build the main server for Classic
+    BUILD_MANGOSD_ONE       Build the main server for TBC
+    BUILD_MANGOSD_TWO       Build the main server for WotLK
     BUILD_REALMD            Build the login server
     BUILD_TOOLS             Build the map/vmap/mmap extractors
     USE_STORMLIB            Use StormLib for reading MPQs
