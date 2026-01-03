@@ -35,6 +35,10 @@ if(BUILD_MANGOSD_TWO)
     # Build the mangos game library
     add_subdirectory(gameTwo)
 endif()
+if(BUILD_MANGOSD_FOUR)
+    # Build the mangos game library
+    add_subdirectory(gameFour)
+endif()
 
 if(BUILD_MANGOSD)
     # Build the mangos world server
