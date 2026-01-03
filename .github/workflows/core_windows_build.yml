@@ -81,12 +81,12 @@ jobs:
             -A x64 \
             -DCMAKE_BUILD_TYPE=Release \
             -DOPENSSL_USE_STATIC_LIBS=TRUE \
-            -DBUILD_TOOLS=1 \
+            -DBUILD_TOOLS=0 \
             -DBUILD_MANGOSD=1 \
             -DBUILD_MANGOSD_ZERO=1 \
             -DBUILD_REALMD=1 \
             -DSOAP=1 \
-            -DSCRIPT_LIB_ELUNA=1 \
+            -DSCRIPT_LIB_ELUNA=0 \
             -DSCRIPT_LIB_SD3=1 \
             -DPLAYERBOTS=1 \
             -DUSE_STORMLIB=1 \
