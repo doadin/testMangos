@@ -2,9 +2,9 @@ name: Windows Build (MSVC)
 
 on:
   push:
-    branches: [ master , devel ]
+    branches: [ main , devel ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -83,6 +83,7 @@ jobs:
             -DOPENSSL_USE_STATIC_LIBS=TRUE \
             -DBUILD_TOOLS=1 \
             -DBUILD_MANGOSD=1 \
+            -DBUILD_MANGOSD_ZERO=1 \
             -DBUILD_REALMD=1 \
             -DSOAP=1 \
             -DSCRIPT_LIB_ELUNA=1 \
