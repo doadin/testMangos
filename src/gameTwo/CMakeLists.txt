@@ -221,7 +221,7 @@ target_link_libraries(vmap2
 )
 endif()
 
-add_library(game STATIC
+add_library(gameTwo STATIC
     ${SRC_GRP_AHBOT}
     ${SRC_GRP_BATTLEGROUND}
     ${SRC_GRP_CHAT_COMMANDS}
@@ -242,7 +242,7 @@ add_library(game STATIC
     $<$<BOOL:${PLAYERBOTS}>:${SRC_GRP_BOTS}>
 )
 
-target_include_directories(game
+target_include_directories(gameTwo
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
         AuctionHouseBot
@@ -272,7 +272,7 @@ target_include_directories(game
         >
 )
 
-target_compile_definitions(game
+target_compile_definitions(gameTwo
     PUBLIC
         $<$<BOOL:${SOAP}>:ENABLE_SOAP>
         $<$<BOOL:${SCRIPT_LIB_SD3}>:ENABLE_SD3>
@@ -280,7 +280,7 @@ target_compile_definitions(game
         $<$<BOOL:${SCRIPT_LIB_ELUNA}>:ENABLE_ELUNA ELUNA_EXPANSION=2 ELUNA_MANGOS>
 )
 
-target_link_libraries(game
+target_link_libraries(gameTwo
     PUBLIC
         shared
         RecastNavigation::Detour
@@ -292,7 +292,7 @@ target_link_libraries(game
 
 # Generate precompiled header
 if(PCH)
-    add_cxx_pch(game pchdef.h pchdef.cpp)
+    add_cxx_pch(gameTwo pchdef.h pchdef.cpp)
 endif()
 
 install(
@@ -311,3 +311,5 @@ if(PLAYERBOTS)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/aiplayerbot.conf.dist
     DESTINATION ${CONF_INSTALL_DIR})
 endif()
+
+set(GAME_LIB gameTwo PARENT_SCOPE)

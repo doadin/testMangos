@@ -17,7 +17,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-set(LIBRARY_NAME game)
+set(LIBRARY_NAME gameFour)
 
 add_definitions(-DDT_POLYREF64)
 
@@ -190,3 +190,5 @@ if(WIN32 AND MSVC)
         POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/AuctionHouseBot/ahbot.conf.dist" "${CONF_COPY_DIR}"
     )
 endif()
+
+set(GAME_LIB gameFour PARENT_SCOPE)
