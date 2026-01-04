@@ -59,7 +59,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Log
     ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Threading
     ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Platform
-    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Utilities
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Dynamic
     ${CMAKE_SOURCE_DIR}/src/framework
     ${CMAKE_BINARY_DIR}/src/shared_${MANGOS_EXPANSION}
     ${MYSQL_INCLUDE_DIR}
