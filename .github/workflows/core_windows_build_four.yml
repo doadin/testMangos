@@ -84,6 +84,7 @@ jobs:
             -DBUILD_TOOLS=0 \
             -DBUILD_MANGOSD=1 \
             -DBUILD_MANGOSD_FOUR=1 \
+            -DMANGOS_EXPANSION="four" \
             -DBUILD_REALMD=1 \
             -DSOAP=1 \
             -DSCRIPT_LIB_ELUNA=0 \

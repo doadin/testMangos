@@ -98,6 +98,7 @@ message(
   For example: cmake .. -DCMAKE_INSTALL_PREFIX=/opt/mangos -DSCRIPT_LIB_SD3=0"
 )
 message("")
+message(STATUS "Building expansion: ${MANGOS_EXPANSION}")
 #==================================================================================#
 
 # =============================================================================
@@ -144,6 +145,7 @@ find_package(MySQL REQUIRED)
 find_package(ZLIB QUIET)
 find_package(BZip2 QUIET)
 
+add_subdirectory(src/shared_${MANGOS_EXPANSION})
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/GenRevision.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/EnsureVersion.cmake)

@@ -42,7 +42,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/dep/recastnavigation/Detour/Include/
     ${CMAKE_SOURCE_DIR}/src/framework/
     ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/
-    ${CMAKE_SOURCE_DIR}/src/game/
+    ${CMAKE_SOURCE_DIR}/src/gameFour/
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_BINARY_DIR}
