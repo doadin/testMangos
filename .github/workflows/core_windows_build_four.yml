@@ -75,6 +75,7 @@ jobs:
       - name: Configure CMake project
         shell: bash
         run: |
+          rm -rf build
           mkdir -p build && cd build
           cmake .. \
             -G "Visual Studio 17 2022" \
