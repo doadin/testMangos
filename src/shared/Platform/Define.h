@@ -177,4 +177,6 @@ typedef uint32      DWORD;
  */
 typedef uint64 OBJECT_HANDLE;
 
+#define SIZEFMTD "zu"
+
 #endif // MANGOS_DEFINE_H
