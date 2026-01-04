@@ -48,17 +48,17 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/dep/recastnavigation/Detour
     ${CMAKE_SOURCE_DIR}/dep/recastnavigation
     ${CMAKE_SOURCE_DIR}/dep/include
-    ${CMAKE_SOURCE_DIR}/src/shared
-    ${CMAKE_SOURCE_DIR}/src/shared/Auth
-    ${CMAKE_SOURCE_DIR}/src/shared/Config
-    ${CMAKE_SOURCE_DIR}/src/shared/Common
-    ${CMAKE_SOURCE_DIR}/src/shared/Database
-    ${CMAKE_SOURCE_DIR}/src/shared/DataStores
-    ${CMAKE_SOURCE_DIR}/src/shared/Utilities
-    ${CMAKE_SOURCE_DIR}/src/shared/Log
-    ${CMAKE_SOURCE_DIR}/src/shared/Threading
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Auth
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Config
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Common
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Database
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/DataStores
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Utilities
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Log
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Threading
     ${CMAKE_SOURCE_DIR}/src/framework
-    ${CMAKE_BINARY_DIR}/src/shared
+    ${CMAKE_BINARY_DIR}/src/shared_${MANGOS_EXPANSION}
     ${MYSQL_INCLUDE_DIR}
     ${OPENSSL_INCLUDE_DIR}
     ${ACE_INCLUDE_DIR}
@@ -150,7 +150,7 @@ if(PCH)
     ADD_CXX_PCH(${LIBRARY_NAME} ${game_PCH})
 endif()
 
-target_link_libraries(${LIBRARY_NAME} shared detour)
+target_link_libraries(${LIBRARY_NAME} shared_${MANGOS_EXPANSION} detour)
 
 if(UNIX)
     # Both systems don't have libdl and don't need them

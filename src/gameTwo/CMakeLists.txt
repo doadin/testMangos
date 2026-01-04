@@ -215,7 +215,7 @@ target_compile_definitions(vmap2
 )
 target_link_libraries(vmap2
     PUBLIC
-        shared
+        shared_${MANGOS_EXPANSION}
         g3dlite
         RecastNavigation::Detour
 )
@@ -282,7 +282,7 @@ target_compile_definitions(gameTwo
 
 target_link_libraries(gameTwo
     PUBLIC
-        shared
+        shared_${MANGOS_EXPANSION}
         RecastNavigation::Detour
         ZLIB::ZLIB
         g3dlite

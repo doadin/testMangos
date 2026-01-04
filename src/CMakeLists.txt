@@ -18,9 +18,21 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 # Build the mangos shared library
-add_subdirectory(shared)
+if (MANGOS_EXPANSION STREQUAL "zero")
+    add_subdirectory(src/shared_zero)
+elseif (MANGOS_EXPANSION STREQUAL "one")
+    add_subdirectory(src/shared_one)
+elseif (MANGOS_EXPANSION STREQUAL "two")
+    add_subdirectory(src/shared_two)
+elseif (MANGOS_EXPANSION STREQUAL "three")
+    add_subdirectory(src/shared_three)
+elseif (MANGOS_EXPANSION STREQUAL "four")
+    add_subdirectory(src/shared_four)
+endif()
 
-add_subdirectory(genrev)
+if (MANGOS_EXPANSION STREQUAL "zero")
+    add_subdirectory(genrev)
+endif()
 
 # Needs to link against mangos_world.lib
 if(BUILD_MANGOSD_ZERO)

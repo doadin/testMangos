@@ -41,12 +41,12 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/dep/include/g3dlite/
     ${CMAKE_SOURCE_DIR}/dep/recastnavigation/Detour/Include/
     ${CMAKE_SOURCE_DIR}/src/framework/
-    ${CMAKE_SOURCE_DIR}/src/shared/
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/
     ${CMAKE_SOURCE_DIR}/src/game/
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_BINARY_DIR}
-    ${CMAKE_BINARY_DIR}/src/shared/
+    ${CMAKE_BINARY_DIR}/src/shared_${MANGOS_EXPANSION}/
 )
 
 #-----------------------------------------------------------------------------
