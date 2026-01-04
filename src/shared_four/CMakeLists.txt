@@ -72,6 +72,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_SOURCE_DIR}/dep
     ${CMAKE_SOURCE_DIR}/dep/acelite
+    ${CMAKE_SOURCE_DIR}/src/shared_${MANGOS_EXPANSION}/Utilities
     ${CMAKE_SOURCE_DIR}/src/framework
     ${CMAKE_BINARY_DIR}
     ${ACE_INCLUDE_DIR}
